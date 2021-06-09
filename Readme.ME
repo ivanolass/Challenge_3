@@ -1,0 +1,70 @@
+#Challenge3 Test - Ivan Gomez
+
+This repository stores performance test for  todoist.com page
+
+##CONTENT
+1.1 STRUCTURE
+1.2 PRECONDITIONS 
+1.3 ENVIROMENT SETUP
+1.4 PARAMETERS
+1.5 TEST EXECUTION
+---------------------------------------------------------------------
+1.1 STRUCTURE
+The structure ins te below
+Main folder
+	  ->.yml file -> contain the run of the test
+	  ->package.json -> Contains the the script for the execution
+----------------------------------------------------------------------
+1.2 PRECONDITIONS
+	The preconditions are have installed a IDE (you can choose your prefered), Node.js and Artilley, you can follow the blow links
+	
+	IDE:
+		Visual Studio:
+			https://code.visualstudio.com/
+		Atom:	
+			https://ide.atom.io/
+	NODE.js:
+	https://wsvincent.com/install-node-js-npm-windows/
+	
+
+----------------------------------------------------------------------
+1.3 ENVIROMENT SETUP
+	Create a new folder where the files will be store.
+	Move the downloaded files to the folder
+	Open the prefered IDE and open the folder previusly created
+	Open the IDE Terminal for the next installations
+
+	1.3.1 Install the Package:
+		Using the command line in the terminal, navigate with 'cd' to the folder where the "package.json" file and rune the next command to install
+		npm init
+	
+	1.3.2 Install Artillery
+		Using the terminal run the mext command
+		npm install artillery --save-dev
+		
+----------------------------------------------------------------------
+1.4 PARAMETERS
+	
+	The main aprameters for the execution are stored in the .yml file and are the below
+
+		Authorization: Bearer (Token) -> (Token) This parameter Should be replace by the token porvided by the page in your account settings
+			example: 
+				Authorization: Bearer f1c6e92ct3d705ba6a4eae3196ae13e1bf1dcfb1
+
+		duration: (duarion in seconds for each of the execution) -> This shuld be replaced for the number of secod that the execution will be runned
+			example: 
+				duration: 5
+
+		arrivalRate: (number of task simulated per second) -> This should be replaced by number
+			example:
+				arrivalRate: 5
+
+---------------------------------------------------------------------
+1.5 TEST EXECUTION
+	To run the test use "npm run" in command line and the below command 
+
+	    performance - To run the tests 
+
+Example of test run:
+		npm run performance
+----------------------------------------------------------------------
